@@ -1,0 +1,47 @@
+name: .NET - build & test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: dotnet
+
+jobs:
+  test:
+    name: Core, CLI & tests (Linux)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet test tests/BinScope.Tests/BinScope.Tests.csproj --logger "trx;LogFileName=results.trx" --logger "console;verbosity=normal"
+      - name: CLI smoke test (exit code 1 = differences found)
+        run: |
+          dotnet run --project src/BinScope.Cli -- compare ../samples/conveyor_v3.plcbin ../samples/conveyor_v3_rebuild.plcbin
+          set +e; dotnet run --project src/BinScope.Cli -- compare ../samples/conveyor_v3.plcbin ../samples/conveyor_v3_changed.plcbin; test $? -eq 1
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: dotnet/tests/BinScope.Tests/TestResults/*.trx
+
+  desktop:
+    name: Desktop app (Windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet build BinScope.sln -c Release
+      - run: dotnet publish src/BinScope.Desktop -c Release -o publish/desktop
+      - run: dotnet publish src/BinScope.Cli -c Release -o publish/cli
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BinScope-windows
+          path: dotnet/publish

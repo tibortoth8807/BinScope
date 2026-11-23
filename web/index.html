@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1b2232" />
+    <title>BinScope – binary viewer & compare</title>
+    <meta name="description" content="Plugin-based viewer and compare tool for PLC Studio binaries: tree view, disassembly, version-dependent diff filters, editing. Runs in the browser." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="brand"><span class="logo">⧉</span> BinScope <small>binary viewer &amp; compare</small></div>
+      <div class="stats" id="stats"></div>
+      <button type="button" class="btn ghost" id="samples-btn" title="Back to the sample list">⭐ Samples</button>
+    </header>
+    <section class="files" id="files"></section>
+    <div class="message hidden" id="message"></div>
+    <div class="workspace">
+      <aside class="side">
+        <section>
+          <h2>Plugin stack <small>first match wins</small></h2>
+          <ol class="plugins" id="plugins"></ol>
+        </section>
+        <section>
+          <h2>Compare filters <small>version-dependent</small></h2>
+          <div class="filters" id="filters"></div>
+        </section>
+      </aside>
+      <main class="main">
+        <div class="tree-tools">
+          <label><input type="checkbox" id="only-diffs" /> Only differences</label>
+          <button type="button" class="btn" id="next-diff">⇣ Next difference</button>
+          <button type="button" class="btn" id="expand-all">Expand all</button>
+          <button type="button" class="btn" id="collapse-all">Collapse</button>
+        </div>
+        <div class="tree" id="tree"></div>
+      </main>
+      <aside class="detail" id="detail"></aside>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

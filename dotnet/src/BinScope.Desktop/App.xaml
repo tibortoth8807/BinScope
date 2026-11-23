@@ -1,0 +1,14 @@
+<Application x:Class="BinScope.Desktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+  <Application.Resources>
+    <SolidColorBrush x:Key="Changed" Color="#FFF3CD" />
+    <SolidColorBrush x:Key="Added" Color="#E2F7E8" />
+    <SolidColorBrush x:Key="Removed" Color="#FDE4E6" />
+    <Style TargetType="Button">
+      <Setter Property="Padding" Value="10,3" />
+      <Setter Property="Margin" Value="2" />
+    </Style>
+  </Application.Resources>
+</Application>

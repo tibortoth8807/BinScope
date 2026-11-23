@@ -1,0 +1,492 @@
+{
+  "files": {
+    "conveyor_v1.plcbin": {
+      "plugin": "plcbin-v1",
+      "version": 1,
+      "nodes": 273,
+      "warnings": 0,
+      "devices": [
+        "Line_PLC",
+        "Field_IO",
+        "Operator_Panel"
+      ],
+      "blocks": [
+        "Main",
+        "Startup",
+        "Scale",
+        "Production"
+      ],
+      "codeWords": [
+        184
+      ],
+      "tags": 13,
+      "hmiElements": 0
+    },
+    "conveyor_v2.plcbin": {
+      "plugin": "plcbin-v2",
+      "version": 2,
+      "nodes": 307,
+      "warnings": 0,
+      "devices": [
+        "Line_PLC",
+        "Field_IO",
+        "Operator_Panel"
+      ],
+      "blocks": [
+        "Main",
+        "Startup",
+        "Scale",
+        "Production"
+      ],
+      "codeWords": [
+        184
+      ],
+      "tags": 13,
+      "hmiElements": 7
+    },
+    "conveyor_v3.plcbin": {
+      "plugin": "plcbin-v3",
+      "version": 3,
+      "nodes": 312,
+      "warnings": 0,
+      "devices": [
+        "Line_PLC",
+        "Field_IO",
+        "Operator_Panel"
+      ],
+      "blocks": [
+        "Main",
+        "Startup",
+        "Scale",
+        "Production"
+      ],
+      "codeWords": [
+        184
+      ],
+      "tags": 13,
+      "hmiElements": 7
+    },
+    "conveyor_v3_changed.plcbin": {
+      "plugin": "plcbin-v3",
+      "version": 3,
+      "nodes": 316,
+      "warnings": 0,
+      "devices": [
+        "Line_PLC",
+        "Field_IO",
+        "Operator_Panel"
+      ],
+      "blocks": [
+        "Main",
+        "Startup",
+        "Scale",
+        "Production"
+      ],
+      "codeWords": [
+        184
+      ],
+      "tags": 13,
+      "hmiElements": 7
+    },
+    "conveyor_v3_corrupt.plcbin": {
+      "plugin": "plcbin-v3",
+      "version": 3,
+      "nodes": 312,
+      "warnings": 1,
+      "devices": [
+        "Line_PLC",
+        "Field_IO",
+        "Operator_Panel"
+      ],
+      "blocks": [
+        "Main",
+        "Startup",
+        "Scale",
+        "Production"
+      ],
+      "codeWords": [
+        184
+      ],
+      "tags": 13,
+      "hmiElements": 7
+    },
+    "conveyor_v3_rebuild.plcbin": {
+      "plugin": "plcbin-v3",
+      "version": 3,
+      "nodes": 312,
+      "warnings": 0,
+      "devices": [
+        "Line_PLC",
+        "Field_IO",
+        "Operator_Panel"
+      ],
+      "blocks": [
+        "Main",
+        "Startup",
+        "Scale",
+        "Production"
+      ],
+      "codeWords": [
+        184
+      ],
+      "tags": 13,
+      "hmiElements": 7
+    },
+    "unknown.bin": {
+      "plugin": "hex",
+      "version": null,
+      "nodes": 7,
+      "warnings": 0
+    }
+  },
+  "comparisons": [
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_rebuild.plcbin",
+      "filters": [],
+      "stats": {
+        "changed": 3,
+        "added": 0,
+        "removed": 0,
+        "ignored": 0
+      },
+      "differences": [
+        "changed project/timestamp",
+        "changed project/buildId",
+        "changed trailer/crc"
+      ]
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_rebuild.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout"
+      ],
+      "stats": {
+        "changed": 0,
+        "added": 0,
+        "removed": 0,
+        "ignored": 3
+      },
+      "differences": []
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_rebuild.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout",
+        "comments",
+        "machine-code",
+        "addressing"
+      ],
+      "stats": {
+        "changed": 0,
+        "added": 0,
+        "removed": 0,
+        "ignored": 3
+      },
+      "differences": []
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_changed.plcbin",
+      "filters": [],
+      "stats": {
+        "changed": 20,
+        "added": 1,
+        "removed": 0,
+        "ignored": 0
+      },
+      "differences": [
+        "changed header/table/#2",
+        "changed header/table/#3",
+        "changed header/table/#4",
+        "changed header/table/#5",
+        "changed header/table/#6",
+        "changed header/table/#7",
+        "changed header/table/#8",
+        "changed header/table/#9",
+        "changed header/table/#10",
+        "changed project/timestamp",
+        "changed project/buildId",
+        "changed devices/Line_PLC/cycle",
+        "changed devices/Field_IO/ip",
+        "added devices/Field_IO/modules/slot3",
+        "changed programs/Line_PLC/code/pc136",
+        "changed programs/Line_PLC/consts/c4",
+        "changed blocks/Line_PLC.Main/source",
+        "changed blocks/Line_PLC.Scale/source",
+        "changed tags/Line_PLC/Horn/comment",
+        "changed hmi/Operator_Panel/#3/label",
+        "changed trailer/crc"
+      ]
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_changed.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout"
+      ],
+      "stats": {
+        "changed": 8,
+        "added": 1,
+        "removed": 0,
+        "ignored": 12
+      },
+      "differences": [
+        "changed devices/Line_PLC/cycle",
+        "changed devices/Field_IO/ip",
+        "added devices/Field_IO/modules/slot3",
+        "changed programs/Line_PLC/code/pc136",
+        "changed programs/Line_PLC/consts/c4",
+        "changed blocks/Line_PLC.Main/source",
+        "changed blocks/Line_PLC.Scale/source",
+        "changed tags/Line_PLC/Horn/comment",
+        "changed hmi/Operator_Panel/#3/label"
+      ]
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_changed.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout",
+        "comments",
+        "machine-code",
+        "addressing"
+      ],
+      "stats": {
+        "changed": 3,
+        "added": 1,
+        "removed": 0,
+        "ignored": 17
+      },
+      "differences": [
+        "changed devices/Line_PLC/cycle",
+        "added devices/Field_IO/modules/slot3",
+        "changed blocks/Line_PLC.Main/source",
+        "changed hmi/Operator_Panel/#3/label"
+      ]
+    },
+    {
+      "left": "conveyor_v1.plcbin",
+      "right": "conveyor_v3.plcbin",
+      "filters": [],
+      "stats": {
+        "changed": 12,
+        "added": 6,
+        "removed": 0,
+        "ignored": 0
+      },
+      "differences": [
+        "changed header/version",
+        "changed header/sections",
+        "changed header/table/#0",
+        "changed header/table/#1",
+        "changed header/table/#2",
+        "changed header/table/#3",
+        "changed header/table/#4",
+        "changed header/table/#5",
+        "changed header/table/#6",
+        "changed header/table/#7",
+        "changed header/table/#8",
+        "changed header/table/#9",
+        "added header/table/#10",
+        "added project/producer",
+        "added project/timestamp",
+        "added project/buildId",
+        "added hmi",
+        "added trailer"
+      ]
+    },
+    {
+      "left": "conveyor_v1.plcbin",
+      "right": "conveyor_v3.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout"
+      ],
+      "stats": {
+        "changed": 1,
+        "added": 1,
+        "removed": 0,
+        "ignored": 16
+      },
+      "differences": [
+        "changed header/version",
+        "added hmi"
+      ]
+    },
+    {
+      "left": "conveyor_v1.plcbin",
+      "right": "conveyor_v3.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout",
+        "comments",
+        "machine-code",
+        "addressing"
+      ],
+      "stats": {
+        "changed": 1,
+        "added": 1,
+        "removed": 0,
+        "ignored": 16
+      },
+      "differences": [
+        "changed header/version",
+        "added hmi"
+      ]
+    },
+    {
+      "left": "conveyor_v2.plcbin",
+      "right": "conveyor_v3.plcbin",
+      "filters": [],
+      "stats": {
+        "changed": 12,
+        "added": 3,
+        "removed": 0,
+        "ignored": 0
+      },
+      "differences": [
+        "changed header/version",
+        "changed header/table/#0",
+        "changed header/table/#1",
+        "changed header/table/#2",
+        "changed header/table/#3",
+        "changed header/table/#4",
+        "changed header/table/#5",
+        "changed header/table/#6",
+        "changed header/table/#7",
+        "changed header/table/#8",
+        "changed header/table/#9",
+        "changed header/table/#10",
+        "added project/timestamp",
+        "added project/buildId",
+        "added trailer"
+      ]
+    },
+    {
+      "left": "conveyor_v2.plcbin",
+      "right": "conveyor_v3.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout"
+      ],
+      "stats": {
+        "changed": 1,
+        "added": 0,
+        "removed": 0,
+        "ignored": 14
+      },
+      "differences": [
+        "changed header/version"
+      ]
+    },
+    {
+      "left": "conveyor_v2.plcbin",
+      "right": "conveyor_v3.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout",
+        "comments",
+        "machine-code",
+        "addressing"
+      ],
+      "stats": {
+        "changed": 1,
+        "added": 0,
+        "removed": 0,
+        "ignored": 14
+      },
+      "differences": [
+        "changed header/version"
+      ]
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_corrupt.plcbin",
+      "filters": [],
+      "stats": {
+        "changed": 2,
+        "added": 0,
+        "removed": 0,
+        "ignored": 0
+      },
+      "differences": [
+        "changed blocks/Line_PLC.Startup/source",
+        "changed trailer/valid"
+      ]
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_corrupt.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout"
+      ],
+      "stats": {
+        "changed": 1,
+        "added": 0,
+        "removed": 0,
+        "ignored": 1
+      },
+      "differences": [
+        "changed blocks/Line_PLC.Startup/source"
+      ]
+    },
+    {
+      "left": "conveyor_v3.plcbin",
+      "right": "conveyor_v3_corrupt.plcbin",
+      "filters": [
+        "build-time",
+        "build-id",
+        "checksum",
+        "producer",
+        "layout",
+        "comments",
+        "machine-code",
+        "addressing"
+      ],
+      "stats": {
+        "changed": 1,
+        "added": 0,
+        "removed": 0,
+        "ignored": 1
+      },
+      "differences": [
+        "changed blocks/Line_PLC.Startup/source"
+      ]
+    }
+  ]
+}

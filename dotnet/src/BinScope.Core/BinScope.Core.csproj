@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>BinScope.Core</RootNamespace>
+    <Description>BinScope API: plugin-based reading, editing and comparing of PLC Studio binaries (.plcbin). Used by the CLI, the desktop app and tests.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <PackageId>BinScope.Core</PackageId>
+  </PropertyGroup>
+</Project>

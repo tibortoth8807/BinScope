@@ -1,0 +1,22 @@
+{
+  "name": "binscope-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "BinScope web: plugin-based viewer and compare tool for PLC Studio binaries (.plcbin), with version-dependent filters, editing and a CLI.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "tsx --test tests/*.test.ts",
+    "cli": "tsx src/cli.ts",
+    "samples:expected": "tsx scripts/expected.ts",
+    "samples:embed": "tsx scripts/embed-samples.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.0"
+  }
+}

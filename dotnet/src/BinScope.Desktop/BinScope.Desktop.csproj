@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RootNamespace>BinScope.Desktop</RootNamespace>
+    <AssemblyName>BinScope</AssemblyName>
+    <Description>BinScope desktop: WPF viewer and compare tool on top of BinScope.Core.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BinScope.Core\BinScope.Core.csproj" />
+  </ItemGroup>
+</Project>
